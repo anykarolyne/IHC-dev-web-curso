@@ -35,7 +35,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- Body -->
 <body>
-
+<div id="page">
 <!-- banner -->
 <div class="banner">
 		<div class="head">
@@ -437,7 +437,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <!-- //contact -->
 
-
+</div>
+<div id="loading"></div>
 <!-- model-video -->
 	<!-- Modal5 -->
 	<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" >
@@ -562,6 +563,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJGFgwaqhUaoV-rEBOQNtT8yGukhc5KQ8&callback=myMap"></script>
 
+	<script>
+			function onReady(callback) {
+			var intervalID = window.setInterval(checkReady, 1000);
+
+			function checkReady() {
+					if (document.getElementsByTagName('body')[0] !== undefined) {
+							window.clearInterval(intervalID);
+							callback.call(this);
+					}
+			}
+		}
+
+		function show(id, value) {
+			document.getElementById(id).style.display = value ? 'block' : 'none';
+		}
+
+		onReady(function () {
+			show('page', true);
+			show('loading', false);
+		});
+	</script>
 </body>
 <!-- //Body -->
 </html>
