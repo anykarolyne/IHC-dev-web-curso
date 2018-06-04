@@ -376,9 +376,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="contact-grids">
 
 				<div class="col-md-7 contact-grid wow fadeInUp animated" data-wow-delay=".5s">
-					<form action="#" method="post">
-						<input type="text" placeholder="Nome" name="name" required="">
-						<input type="email" placeholder="Email" name="email" required="">
+					<form action="/" method="post"  id="form" class="validate">
+						<input type="text" placeholder="Nome" name="name" id="full-name" required>
+						<input type="email" placeholder="Email" name="email" id="email-input" required>
 						<div class="clearfix"> </div>
 						<textarea placeholder="Mensagem.." name="message" required=""></textarea>
 						<input type="submit" value="Enviar" >
@@ -529,6 +529,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script src="js/SmoothScroll.min.js"></script>
 	<script type="text/javascript" src="js/move-top.js"></script>
 	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript" src="js/sound.js"></script>
 	<!-- here stars scrolling icon -->
 	<script type="text/javascript">
 		$(document).ready(function() {
