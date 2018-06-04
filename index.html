@@ -40,30 +40,34 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="banner">
 		<div class="head">
 			<div class="container">
+				<center>
 					<div class="navbar-top">
 							<!-- Brand and toggle get grouped for better mobile display -->
-							<div class="navbar-header">
+							<div class="navbar-header" >
 							  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>
 							  </button>
-								 <div class="navbar-brand logo ">
-									<h1 class="animated wow pulse" data-wow-delay=".5s">
-									<a href="index.html">E-Progress</a></h1>
-								</div>
+									<div class="navbar-brand logo">
+									 <h1 class="animated wow pulse" data-wow-delay=".5s">
+									 <img src="images/logo.png"  alt="" />
+								 </div>
+
 
 							</div>
 							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							 <ul class="nav navbar-nav link-effect-4">
 								<li class="active"><a href="index.html" data-hover="Home">Home</a> </li>
-								<li><a href="#objetivo" data-hover="About">Objetivo</a> </li>
-								<li><a href="#publico"  data-hover="Gallery">Público alvo</a></li>
-								<li><a href="#grade" data-hover="About">Grade currícular</a> </li>
-								<li><a href="#professores" data-hover="About">Professores</a> </li>
-								<li><a href="#duvidas"  data-hover="Gallery">Dúvidas</a></li>
+								<li><a href="#objetivo" data-hover="objetivo">Objetivo</a> </li>
+								<li><a href="#publico"  data-hover="publico">Público alvo</a></li>
+								<li><a href="#professores" data-hover="corpo">Corpo docente</a> </li>
+								<li><a href="#duvidas"  data-hover="carga">Carga horária</a></li>
+								<li><a href="#grade" data-hover="programa">Programa do curso</a></li>
+								<li><a href="#grade" data-hover="ementa">Ementa das disciplinas</a></li>
+								<li><a href="#grade" data-hover="duvidas">Dúvidas frequentes</a></li>
 								<!--
 								<li class="dropdown">
 									<a href="#" class="dropdown-toggle" data-hover="Pages" data-toggle="dropdown">Pages <b class="caret"></b></a>
@@ -78,14 +82,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div><!-- /.navbar-collapse -->
 						</div>
 					  <div class="clearfix"></div>
+				</center>
+
 			</div>
 		</div>
 		<div class="bannerinfo">
 			<div class="container">
 				<div class="col-md-5 bannergrid">
 					<div class="top">
-						<h5>Curso completo de</h5>
-						<h2>Desenvolvimento web</h2>
+						<h5>O que você vai aprender:</h5>
 					</div>
 					<div class="bottom">
 						<div class="col-md-6 bannergrid1 clr">
@@ -305,6 +310,63 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </section>
 <!--//profs-->
 
+<!-- labs-->
+<section id="labs">
+	<div class="labs">
+		<div class="container">
+			<h3 class="heading">Laboratórios</h3>
+			<div class="photos">
+				<div class="responsive">
+				  <div class="gallery">
+				    <a target="_blank" href="images/lab/1.jpg">
+				      <img src="images/lab/1.jpg" alt="Trolltunga Norway" width="300" height="200">
+				    </a>
+				  </div>
+				</div>
+
+
+				<div class="responsive">
+				  <div class="gallery">
+				    <a target="_blank" href="images/lab/2.jpg">
+				      <img src="images/lab/2.jpg" alt="Forest" width="650" height="400">
+				    </a>
+				  </div>
+				</div>
+
+				<div class="responsive">
+				  <div class="gallery">
+				    <a target="_blank" href="images/lab/3.jpg">
+				      <img src="images/lab/3.jpg" alt="Northern Lights" width="650" height="400">
+				    </a>
+				  </div>
+				</div>
+
+				<div class="responsive">
+				  <div class="gallery">
+				    <a target="_blank" href="images/lab/3.jpg">
+				      <img src="images/lab/4.jpg" alt="Northern Lights" width="650" height="400">
+				    </a>
+				  </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- labs -->
+
+<!-- map-->
+<section id="maps">
+	<div class="map">
+		<div class="container">
+			<h3 class="heading">Mapa</h3>
+			<div id="map"></div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- map -->
+
+
 <!-- contact -->
 <section id="duvidas">
 	<div class="contact">
@@ -483,7 +545,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			});
 	</script>
 	<!-- //here ends scrolling icon -->
-<!-- smooth scrolling -->
+
+	<!-- map -->
+	<script>
+		function myMap() {
+		var uluru = {lat: -22.424669, lng: -45.456018};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 19,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJGFgwaqhUaoV-rEBOQNtT8yGukhc5KQ8&callback=myMap"></script>
 
 </body>
 <!-- //Body -->
